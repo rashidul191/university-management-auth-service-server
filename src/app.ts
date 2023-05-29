@@ -1,19 +1,19 @@
-import express, { Application, NextFunction, Request, Response } from "express";
+import express, { Application, Request, Response } from 'express'
 
-import cors from "cors";
+import cors from 'cors'
 
-const app: Application = express();
+const app: Application = express()
 
 // middleware cors
-app.use(cors());
+app.use(cors())
 
 // parser
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // root router
-app.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send("university-management project working yea.....");
-});
+app.get('/', (req: Request, res: any) => {
+  res.send('university-management project working yea.....')
+})
 
-export default app;
+export default app
