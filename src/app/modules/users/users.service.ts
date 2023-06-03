@@ -1,10 +1,9 @@
-import User from './users.model'
 import { IUser } from './users.interface'
 import config from '../../../config'
 import { generateUserId } from './user.utils'
+import User from './users.model'
 
 export const createUserService = async (user: IUser): Promise<IUser | null> => {
-
   // auto generated increment id
   const id = await generateUserId()
   user.id = id
@@ -23,5 +22,5 @@ export const createUserService = async (user: IUser): Promise<IUser | null> => {
 
 // get user service
 export const getUserService = async () => {
-  console.log('getUser router working')
+  // console.log('getUser router working')
 }
